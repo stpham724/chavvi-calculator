@@ -1,9 +1,23 @@
 package com.stpham724;
 
+import java.util.Scanner;
+
 public class App {
-    public static void main(String[] args) {
+public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    boolean running = true;
+
+    while (running) {
         printMenu();
+        String command = scanner.nextLine().trim();
+
+        if (command.equals("q")) {
+            running = false;
+        }
     }
+
+    scanner.close();
+}
 
     private static void printMenu() {
         System.out.println("----------------------------------------------------");
