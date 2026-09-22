@@ -6,9 +6,11 @@ public class App {
 public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     boolean running = true;
+    float a = 0.0f;
+    float b = 0.0f;
 
     while (running) {
-        printMenu();
+        printMenu(a, b);
         String command = scanner.nextLine().trim();
 
         if (command.equals("q")) {
@@ -19,9 +21,11 @@ public static void main(String[] args) {
     scanner.close();
 }
 
-    private static void printMenu() {
+    private static void printMenu(float a, float b) {
         System.out.println("----------------------------------------------------");
         System.out.println("Chavvi Calc");
+        System.out.println("----------------------------------------------------");
+        System.out.printf("A = %.3f        B = %.3f%n", a, b);
         System.out.println("----------------------------------------------------");
         System.out.println("a       Enter a value for A");
         System.out.println("b       Enter a value for B");
