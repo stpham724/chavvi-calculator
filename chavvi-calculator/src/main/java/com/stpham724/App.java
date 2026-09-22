@@ -14,8 +14,11 @@ public static void main(String[] args) {
         String command = scanner.nextLine().trim();
 
         if (command.equals("q")) {
-            running = false;
-        }
+    running = false;
+} else if (command.equals("a")) {
+    System.out.print("Enter a value for A: ");
+    a = Float.parseFloat(scanner.nextLine().trim());
+}
     }
 
     scanner.close();
