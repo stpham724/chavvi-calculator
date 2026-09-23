@@ -27,6 +27,12 @@ public class App {
                 a = a - b;
             } else if (command.equals("*")) {
                 a = a * b;
+            } else if (command.equals("/")) {
+                if (b != 0.0f) {
+                    a = a / b;
+                } else {
+                    System.out.println("You can't divide by zero.");
+                }
             }
         }
 
