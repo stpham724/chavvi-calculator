@@ -33,10 +33,15 @@ public class App {
                 } else {
                     System.out.println("You can't divide by zero.");
                 }
+            } else if (command.equals("c")) {
+                a = 0.0f;
+                b = 0.0f;
             }
-        }
+        
+    }
 
-        scanner.close();
+    scanner.close();
+
     }
 
     private static void printMenu(float a, float b) {
