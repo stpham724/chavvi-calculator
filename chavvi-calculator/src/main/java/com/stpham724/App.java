@@ -23,6 +23,8 @@ public class App {
                 b = Float.parseFloat(scanner.nextLine().trim());
             } else if (command.equals("+")) {
                 a = a + b;
+            } else if (command.equals("-")) {
+                a = a - b;
             }
         }
 
