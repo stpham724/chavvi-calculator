@@ -16,11 +16,9 @@ public class App {
             if (command.equals("q")) {
                 running = false;
             } else if (command.equals("a")) {
-                System.out.print("Enter a value for A: ");
-                a = Float.parseFloat(scanner.nextLine().trim());
+                a = getNumber(scanner, "A", a);
             } else if (command.equals("b")) {
-                System.out.print("Enter a value for B: ");
-                b = Float.parseFloat(scanner.nextLine().trim());
+                b = getNumber(scanner, "B", b);
             } else if (command.equals("+")) {
                 a = a + b;
             } else if (command.equals("-")) {
@@ -62,5 +60,16 @@ public class App {
         System.out.println("q       Quit");
         System.out.println("----------------------------------------------------");
         System.out.print("Enter a command: ");
+    }
+
+    private static float getNumber(Scanner scanner, String name, float currentValue) {
+        System.out.print("Enter a value for " + name + ": ");
+
+        try {
+            return Float.parseFloat(scanner.nextLine().trim());
+        } catch (NumberFormatException e) {
+            System.out.println("That doesn't look like a number. Try again.");
+            return currentValue;
+        }
     }
 }
