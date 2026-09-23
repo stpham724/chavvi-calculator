@@ -25,6 +25,8 @@ public class App {
                 a = a + b;
             } else if (command.equals("-")) {
                 a = a - b;
+            } else if (command.equals("*")) {
+                a = a * b;
             }
         }
 
