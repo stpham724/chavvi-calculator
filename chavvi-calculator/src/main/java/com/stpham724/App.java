@@ -21,6 +21,8 @@ public class App {
             } else if (command.equals("b")) {
                 System.out.print("Enter a value for B: ");
                 b = Float.parseFloat(scanner.nextLine().trim());
+            } else if (command.equals("+")) {
+                a = a + b;
             }
         }
 
