@@ -36,11 +36,13 @@ public class App {
             } else if (command.equals("c")) {
                 a = 0.0f;
                 b = 0.0f;
+            } else {
+                System.out.println("That command doesn't work. Try again.");
             }
-        
-    }
 
-    scanner.close();
+        }
+
+        scanner.close();
 
     }
 
