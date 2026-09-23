@@ -37,11 +37,9 @@ public class App {
             } else {
                 System.out.println("That command doesn't work. Try again.");
             }
-
         }
 
         scanner.close();
-
     }
 
     private static void printMenu(float a, float b) {
