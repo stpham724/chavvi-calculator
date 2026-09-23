@@ -3,26 +3,29 @@ package com.stpham724;
 import java.util.Scanner;
 
 public class App {
-public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
-    boolean running = true;
-    float a = 0.0f;
-    float b = 0.0f;
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        boolean running = true;
+        float a = 0.0f;
+        float b = 0.0f;
 
-    while (running) {
-        printMenu(a, b);
-        String command = scanner.nextLine().trim();
+        while (running) {
+            printMenu(a, b);
+            String command = scanner.nextLine().trim();
 
-        if (command.equals("q")) {
-    running = false;
-} else if (command.equals("a")) {
-    System.out.print("Enter a value for A: ");
-    a = Float.parseFloat(scanner.nextLine().trim());
-}
+            if (command.equals("q")) {
+                running = false;
+            } else if (command.equals("a")) {
+                System.out.print("Enter a value for A: ");
+                a = Float.parseFloat(scanner.nextLine().trim());
+            } else if (command.equals("b")) {
+                System.out.print("Enter a value for B: ");
+                b = Float.parseFloat(scanner.nextLine().trim());
+            }
+        }
+
+        scanner.close();
     }
-
-    scanner.close();
-}
 
     private static void printMenu(float a, float b) {
         System.out.println("----------------------------------------------------");
